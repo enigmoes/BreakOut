@@ -5,4 +5,4 @@ Prueba el juego en dos versiones:
 
 ## ENLACE:
   ### NORMAL
-    - https://enigmoes.github.io/BreakOut/
+  ### https://enigmoes.github.io/BreakOut/
