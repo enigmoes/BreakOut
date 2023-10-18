@@ -3,8 +3,6 @@ Popular juego BreakOut, creado con JavaScript vanilla
 
 Prueba el juego en dos versiones:
 
-## VERSIONES:
+## ENLACE:
   ### NORMAL
-    - Enlace
-  ### HALLOWEEN
-    - Enlace
+    - https://enigmoes.github.io/BreakOut/
