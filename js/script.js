@@ -7,13 +7,22 @@ var declarations = function () {
    x = window.innerWidth / 2;
    y = window.innerHeight - 30;
    // Valores de desplazamiento (velocidad)
-   dx = 3;
-   dy = -3;
+   dx = 5;
+   dy = -5;
    // Tamaño de la bola
-   ballRadius = 10;
+   if (window.innerWidth < 768) {
+      ballRadius = 20
+   } else {
+      ballRadius = 10;
+   }
    //  Definimos tamaño de la pala
-   paddleHeight = 10;
-   paddleWidth = 100;
+   if (window.innerWidth < 768) {
+      paddleHeight = 20;
+      paddleWidth = 200;
+   } else {
+      paddleHeight = 10;
+      paddleWidth = 100;
+   }
    // Posiciones de la pala
    paddleX = (window.innerWidth - paddleWidth) / 2;
    paddleY = window.innerHeight - paddleHeight;
@@ -21,12 +30,21 @@ var declarations = function () {
    rightPressed = false;
    leftPressed = false;
    // Variables para los ladrillos
-   brickRowCount = 6;
-   brickColumnCount = 10;
-   brickWidth = 75;
-   brickHeight = 20;
-   brickPadding = 10;
-   brickOffsetTop = 60;
+   if (window.innerWidth < 768) {
+      brickRowCount = 6;
+      brickColumnCount = 6;
+      brickWidth = 150;
+      brickHeight = 30;
+      brickPadding = 10;
+      brickOffsetTop = 60;
+   } else {
+      brickRowCount = 6;
+      brickColumnCount = 10;
+      brickWidth = 75;
+      brickHeight = 20;
+      brickPadding = 10;
+      brickOffsetTop = 60;
+   }
    if (window.innerWidth < 1280) {
       brickOffsetLeft = (window.innerWidth - ((brickWidth + brickPadding) * brickColumnCount)) / 2;
    } else {
@@ -190,16 +208,16 @@ var drawBricks = function () {
 
 // Funcion para pinta contador
 var drawScore = function () {
-   context.font = "18px Arial";
+   context.font = "22px Arial";
    context.fillStyle = "#FFF";
-   context.fillText("Score: " + score, 8, 20);
+   context.fillText("Score: " + score, 12, 25);
 };
 
 // Funcion para pintar numero de vidas
 var drawLives = function () {
-   context.font = "18px Arial";
+   context.font = "22px Arial";
    context.fillStyle = "#FFF";
-   context.fillText("Lives: " + lives, canvas.width - 75, 20);
+   context.fillText("Lives: " + lives, canvas.width - 85, 25);
 };
 
 // Random color ball
